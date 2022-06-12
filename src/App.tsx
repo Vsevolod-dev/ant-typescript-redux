@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Content} from 'antd/lib/layout/layout';
+import React, {FC} from 'react';
+import AppRouter from './components/AppRouter';
+import Navbar from './components/Navbar';
+import 'antd/dist/antd.css';
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: FC = () => {
+    return (
+        <div>
+            <Navbar/>
+            <Content>
+                <AppRouter/>
+            </Content>
+        </div>
+    );
+};
 
 export default App;
